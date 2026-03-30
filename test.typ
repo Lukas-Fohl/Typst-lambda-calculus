@@ -84,48 +84,50 @@ $=$ #CHURCH_TO_INT(MODULO(ADD(NINE())(TWO()))(FIVE())) \
 #pagebreak()
 == Comparisons (Numerical)
 === Is zero
-$(1 = 0)$
-$equiv$ #IS_ZERO(SUCC(ZERO)) \
 $(0 = 0)$
 $equiv$ #IS_ZERO(ZERO) \
+$(1 = 0)$
+$equiv$ #IS_ZERO(ONE()) \
 
 === Equal
 $(6 = 6)$
 $equiv$ #EQ(SIX())(SIX()) \
-$(1 = 6)$
-$equiv$ #EQ(ONE())(SIX()) \
+$(6 = 5)$
+$equiv$ #EQ(SIX())(FIVE()) \
+$(5 = 6)$
+$equiv$ #EQ(FIVE())(SIX()) \
 
 === Less than
-$(5 < 8)$
-$equiv$ #LT(FIVE())(EIGHT()) \
-$(5 < 5)$
-$equiv$ #LT(FIVE())(FIVE()) \
-$(8 < 5)$
-$equiv$ #LT(EIGHT())(FIVE()) \
+$(5 < 6)$
+$equiv$ #LT(FIVE())(SIX()) \
+$(6 < 6)$
+$equiv$ #LT(SIX())(SIX()) \
+$(6 < 5)$
+$equiv$ #LT(SIX())(FIVE()) \
 
 === Less than equal
-$(5 <= 5)$
-$equiv$ #LTEQ(FIVE())(FIVE()) \
-$(4 <= 5)$
-$equiv$ #LTEQ(FOUR())(FIVE()) \
-$(5 <= 4)$
-$equiv$ #LTEQ(FIVE())(FOUR()) \
+$(5 <= 6)$
+$equiv$ #LTEQ(FIVE())(SIX()) \
+$(6 <= 6)$
+$equiv$ #LTEQ(SIX())(SIX()) \
+$(6 <= 5)$
+$equiv$ #LTEQ(SIX())(FIVE()) \
 
 === Greater than
-$(8 > 7)$
-$equiv$ #GT(EIGHT())(SEVEN()) \
-$(2 > 3)$
-$equiv$ #GT(TWO())(THREE()) \
-$(3 > 3)$
-$equiv$ #GT(THREE())(THREE()) \
+$(6 > 5)$
+$equiv$ #GT(SIX())(FIVE()) \
+$(6 > 6)$
+$equiv$ #GT(SIX())(SIX()) \
+$(5 > 6)$
+$equiv$ #GT(FIVE())(SIX()) \
 
 === Greater than equal
-$(8 >= 8)$
-$equiv$ #GTEQ(EIGHT())(EIGHT()) \
-$(8 >= 6)$
-$equiv$ #GTEQ(EIGHT())(SIX()) \
-$(6 >= 8)$
-$equiv$ #GTEQ(SIX())(EIGHT()) \
+$(6 >= 5)$
+$equiv$ #GTEQ(SIX())(FIVE()) \
+$(6 >= 6)$
+$equiv$ #GTEQ(SIX())(SIX()) \
+$(5 >= 6)$
+$equiv$ #GTEQ(FIVE())(SIX()) \
 
 #pagebreak()
 == Fizz Buzz (1 to 20)
